@@ -1,8 +1,0 @@
---------------------
-Figure{area=25.0, perimeter=26.18033988749895}
-Polygon{vertexes=[Point2D.Double[10.0, 10.0], Point2D.Double[10.0, 15.0], Point2D.Double[20.0, 10.0]], sidesLengths=[5.0, 11.180339887498949, 10.0]}
-Triangle{angles=[NaN, NaN, 26.56505117707799], heights=[10.0, 4.47213595499958, 5.0], medians=[10.307764064044152, 5.590169943749474, 7.0710678118654755], bisectors=[10.274862967460155, 4.714045207910316, 5.877852522924732], inscribedCircleRadius=1.9098300562505257, circumscribedCircleRadius=5.5901699437494745}
---------------------
-Figure{area=25.0, perimeter=26.18033988749895}
-Polygon{vertexes=[Point2D.Double[10.0, 10.0], Point2D.Double[10.0, 15.0], Point2D.Double[20.0, 10.0]], sidesLengths=[5.0, 11.180339887498949, 10.0]}
-Triangle{angles=[NaN, NaN, 26.56505117707799], heights=[10.0, 4.47213595499958, 5.0], medians=[10.307764064044152, 5.590169943749474, 7.0710678118654755], bisectors=[10.274862967460155, 4.714045207910316, 5.877852522924732], inscribedCircleRadius=1.9098300562505257, circumscribedCircleRadius=5.5901699437494745}
