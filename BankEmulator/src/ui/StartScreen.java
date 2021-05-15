@@ -72,7 +72,8 @@ public class StartScreen {
         try {
             root = FXMLLoader.load(getClass().getResource("home_screen.fxml"));
             primaryStage.setTitle("Личный кабинент Клиента");
-            primaryStage.setScene(new Scene(root, 600, 400));
+            Scene scene = new Scene(root, 800, 400);
+            primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }

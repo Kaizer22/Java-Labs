@@ -1,20 +1,27 @@
 package bank;
 
 import bank.commands.Command;
+import bank.model.Account;
 import bank.model.Client;
 
 import java.io.*;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
+import java.util.logging.Handler;
 
 public class Session {
     private Client currentClient;
     private List<Client> clientsList;
 
+    private HashMap<String, Object> sessionBuffer;
+
     private static Session INSTANCE;
 
     public Session() {
         clientsList = new LinkedList<>();
+        sessionBuffer = new HashMap<>();
         restoreData();
     }
 
@@ -32,6 +39,11 @@ public class Session {
     protected void addClient(Client client) {
         clientsList.add(client);
     }
+
+    public Client getCurrentClient() {
+        return currentClient;
+    }
+
     public void performCommand(Command command) {
         for (Client client:
              clientsList) {
@@ -68,9 +80,7 @@ public class Session {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
+        OperationHistory.saveAndClear();
     }
 
     public Client getClient(String login, String password) {
@@ -82,7 +92,25 @@ public class Session {
         return null;
     }
 
+    public Account getAccount(String accountUUID) {
+        for (Client client: clientsList) {
+            for (Account account:client.getAccountList()) {
+                if (account.getAccountId().toString().equals(accountUUID)) {
+                    return account;
+                }
+            }
+        }
+        return null;
+    }
+
     public void setCurrentClient(Client client) {
         currentClient = client;
+    }
+
+    public Object getFromBuffer(String key) {
+        return  sessionBuffer.get(key);
+    }
+    public void putToBuffer(String key, Object value) {
+        sessionBuffer.put(key, value);
     }
 }

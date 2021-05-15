@@ -35,9 +35,10 @@ public abstract class Command implements Serializable {
         this.executionFinish = executionFinish;
     }
 
-    public void safeExecute(){
+     public void safeExecute(){
         if (!isExecuted) {
             execute();
+            isExecuted = true;
             if (currentClient != null) {
                 performerUUID = currentClient.getUuid();
             }

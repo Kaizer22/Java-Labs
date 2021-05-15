@@ -9,7 +9,7 @@ public class CloseAccount extends Command {
     private UUID accountUUID;
 
 
-    CloseAccount(Client currentClient) {
+    public CloseAccount(Client currentClient) {
         super(currentClient);
         description = "Закрытие счета";
     }

@@ -4,6 +4,7 @@ import bank.commands.Command;
 import bank.commands.Transfer;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -70,6 +71,18 @@ public class Client implements Serializable {
             }
         }
         return null;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public List<Account> getAccountList() {
+        return new ArrayList<>(accountList);
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.sql.Time;
 import java.util.UUID;
 
 public class OpenAccount extends Command {
-    OpenAccount(Client currentClient) {
+    public OpenAccount(Client currentClient) {
         super(currentClient);
         description = "Открытие клиентского счета";
     }

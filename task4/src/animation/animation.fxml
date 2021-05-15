@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: DarkTurquoiseLightCyan;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="animation.Controller">
+   <children>
+      <Button fx:id="buttonStart" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleStart" text="START" />
+      <Button fx:id="buttonStop" layoutX="174.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleStop" text="STOP" />
+      <Button fx:id="buttonExit" layoutX="334.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleExit" text="EXIT" />
+      <Canvas fx:id="canvasField" height="300.0" layoutX="10.0" layoutY="24.0" width="380.0" />
+      <Line endX="164.0" layoutX="202.0" layoutY="336.0" startX="-169.0" />
+   </children>
+</AnchorPane>

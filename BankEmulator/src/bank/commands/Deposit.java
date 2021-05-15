@@ -6,7 +6,10 @@ import java.sql.Time;
 import java.util.UUID;
 
 public class Deposit extends Command {
-    Deposit(Client currentClient) {
+    private double amount;
+    private UUID accountUUID;
+
+    public Deposit(Client currentClient) {
         super(currentClient);
         description = "Внесение средств на счет";
     }
@@ -17,6 +20,16 @@ public class Deposit extends Command {
 
     @Override
     void execute() {
-
+        currentClient.getAccountByUUID(accountUUID).makeDeposit(amount);
+        commandLog = commandLog.concat(getLogPrefix()
+                .concat("На счет %s зачислено %.2f у.е.".formatted(accountUUID.toString(), amount))
+        );
     }
+
+    public void initDeposit(UUID accountUUID, double amount) {
+        this.amount = amount;
+        this.accountUUID = accountUUID;
+    }
+
+
 }

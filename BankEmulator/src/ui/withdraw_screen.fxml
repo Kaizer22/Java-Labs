@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="180.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.WithdrawScreen">
+   <children>
+      <Button fx:id="confirmWithdraw" layoutX="332.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleConfirmWithdraw" text="Вывести">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="1.95" specularExponent="25.58" surfaceScale="5.57">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="204.07" elevation="49.19" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Cambria Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="184.0" layoutY="14.0" text="ВЫВОД СРЕДСТВ" />
+      <Label fx:id="operatedAccountUUID" layoutX="141.0" layoutY="31.0" text="ACCOUNT_ID" />
+      <Label layoutX="112.0" layoutY="63.0" text="Сумма:" />
+      <TextField fx:id="amountField" layoutX="159.0" layoutY="59.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="backToHomeScreen" layoutX="14.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleBackToHomeScreen" text="Назад">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="1.95" specularExponent="25.58" surfaceScale="5.57">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="204.07" elevation="49.19" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Cambria Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="4.0" layoutY="149.0" text="Внимание! Если на счете недостаточно средств, то операция не будет выполнена" />
+   </children>
+</AnchorPane>

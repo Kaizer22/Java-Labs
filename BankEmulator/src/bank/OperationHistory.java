@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class OperationHistory {
     private static final String HISTORY_FILE_NAME = "operation_history.txt";
-    private static final int HISTORY_BUFFER_SIZE = 1;
+    private static final int HISTORY_BUFFER_SIZE = 3;
     private static final List<Command> history;
 
     static {
@@ -31,7 +31,6 @@ public class OperationHistory {
 
     }
     public static void saveAndClear(){
-        //TODO save to file and clear list
         Path file = Paths.get(HISTORY_FILE_NAME);
         List<String> buf = history.stream().map(Command::toString).collect(Collectors.toList());
         try {
@@ -42,13 +41,8 @@ public class OperationHistory {
         history.clear();
     }
 
-    public static void getCommands(Date start, Date finish) {
-
-    }
-    public static void getCommands(String clientFirstName, String clientSecondName) {
-
-    }
-    public static void getCommand(UUID commandID) {
-
-    }
+    //TODO поиск по сохраненным командам
+    public static void getCommands(Date start, Date finish) {}
+    public static void getCommands(String clientFirstName, String clientSecondName) {}
+    public static void getCommand(UUID commandID) {}
 }

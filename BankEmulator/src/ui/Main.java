@@ -29,7 +29,6 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(windowEvent -> {
             if (windowEvent.getEventType() == WindowEvent.WINDOW_CLOSE_REQUEST) {
                     currentSession.saveData();
-                System.out.println("Hello");
             }
         });
     }
