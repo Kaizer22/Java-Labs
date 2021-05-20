@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="150.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.DepositScreen">
+   <children>
+      <Button fx:id="confirmDeposit" layoutX="291.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleConfirmDeposit" text="Внести">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="1.95" specularExponent="25.58" surfaceScale="5.57">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="204.07" elevation="49.19" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Cambria Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="140.0" layoutY="14.0" text="ПОПОЛНЕНИЕ СЧЕТА" />
+      <Label fx:id="operatedAccountUUID" layoutX="104.0" layoutY="31.0" text="ACCOUNT_ID" />
+      <Label layoutX="81.0" layoutY="63.0" text="Сумма:" />
+      <TextField fx:id="depositSum" layoutX="127.0" layoutY="59.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="backToHomeScreen" layoutX="14.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleBackToHomeScreen" text="Назад">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="1.95" specularExponent="25.58" surfaceScale="5.57">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="204.07" elevation="49.19" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Cambria Bold Italic" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

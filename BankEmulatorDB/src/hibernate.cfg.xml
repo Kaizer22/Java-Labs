@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://ec2-52-213-119-221.eu-west-1.compute.amazonaws.com:5432/dcj6gf0rk7pilu</property>
+        <property name="connection.username">dsuvymkwgpzjba</property>
+        <property name="connection.password">c6d07e9e55e9401690f45fc1b9fce5f9cf8b1d7a3aa485bcb457743c50de9c74</property>
+
+
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- <mapping resource="bean/User.hbm.xml" /> -->
+
+    </session-factory>
+</hibernate-configuration>
